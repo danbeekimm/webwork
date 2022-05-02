@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>  
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+    <style>
+        #di{
+            width: 300px;
+            height: 200px;
+            
+
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <div id="di">
+    <button type="button" id="btn1" >영화예매</button></div>
+    
+    <script>
+        $("#btn1").click(function(){
+            var s="";
+            s+="<br><br>";
+            s+="<button type='button' class='addbtn'>극장선택</button>";
+            s+="<button type='button' class='addbtn2'>영화선택</button>";
+            s+="<br>";
+
+            $("div").append(s); 
+        });
+
+
+            $(document).on("click",".addbtn", function(){
+            $(this).after("<hr><b>CGV강남점</b><hr><b>MEGABOX강남점</b><hr><b>CGV교보타워점</b><hr>");
+            });
+
+            $(document).on("click",".addbtn2", function(){
+            $(this).after("<hr><b>바람과같이사라지다</b><hr><b>엑시트</b><hr><b>괴물</b><hr>");
+            });
+
+            
+                  
+
+            
+    </script>
+</body>
+</html>

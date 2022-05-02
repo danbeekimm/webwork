@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        table, td,th{
+            border: 2px solid lightslategray;
+            /* border-collapse: collapse; 두줄없애기 */
+            border-collapse: separate; 
+            /* 두줄만들기 */
+        }
+        th{
+            color: white;
+            background-color: lightcoral;
+            height: 30px;
+        }
+        table{width: 100%;empty-cells: hide;} /*비어있으면 사라짐*/
+        td{
+            text-align: center;
+            height: 40px;
+            vertical-align: bottom; /*수직아래가운데정렬*/
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>vip고객리스트</caption>
+        
+        <tr>
+            <th>이름</th>
+            <th>이메일</th>
+        </tr>
+        <tr>
+            <td>김철수</td>
+            <td>naver.com</td>
+        </tr>
+        <tr>
+            <td>김영희</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

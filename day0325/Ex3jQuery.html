@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="http://code.jquery.com/jquery-3.5.0.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        body *{
+            font-size: 1.2rem;/*최상위태그가 기준, em:상위태그가 기준*/
+            font-family: 'Jua';
+        }
+
+    </style>
+    <script>
+        //처음 load 시 호출되는 함수(window.onload)
+        //document.ready(function(){}):이렇게써도됨
+        $(function(){ //제이커리쓰려면 $쓰고안에써야함.
+           // alert("처음입니다");
+            $("div.apple").css("color","red");
+
+            $("div.apple>div.banana").css("font-size","25px");//div에클래스에 바로밑에있는 바나나에만 적용시켜라
+            //>한칸뒤에면 바로밑만 / 하나뛰면 밑밑도 가능.
+            $(".banana").css("border","3px dotted green");//클래스상관없이 바나나인것.
+//방법1:3개의 style 적용시 이어붙여도된다
+            $("div#kiwi").css("color","green").css("font-size","3em").css("background-color","#ffc");
+            //"div #kiwi":한칸뛰면 의미가달라짐.
+
+            //방법2:여러개의 style 변경
+            $("span.banana").css({
+                "color":"gray",
+                "border":"5px,inset yellow",
+                "font-size":"4em",
+                "background-color":"cyan"
+            });
+
+            //span.banana의 배경색을얻어 b.apple에 적용해보자
+            $("b.apple").css("background-color",$("span.banana").css("background-color"));
+
+            //id.kiwi 글자색얻어 orange적용
+            $("#orange").css("color",$("#kiwi").css("color"));
+
+            //아이디 img1에 src에 이미지 넣기 //속성은 attr로 변경
+            $("#img1").attr("src","../img/ani12.gif");
+            //모든 img 태그에 이미지넣기
+           // $("img").attr("src","../연예인사진/12.jpg");
+
+           //img 태그중 클래스명이 myimg 인경우
+           $("img.myimg").attr({
+               "src":"../연예인사진/12.jpg",
+               "width":"200",
+               "heigth":"240",
+               "border":"2"
+           })
+        });
+
+    </script>
+</head>
+<body>
+    <!--452 jquery
+    css함수:ㄴstyle변경(인자가 1개일땐 css값반환)
+    attr함수:속성변경(인자가 1개일땐 attr값 반환)
+-->
+<div class="apple">
+    Div apple class
+    <div class="banana">
+        Div apple 안에 banana Class
+    </div>
+</div>
+
+<b class="apple">B tag apple Class</b><br>
+<b id="orange">B Tag id 가 orange</b><br>
+<span class="banana">Span Tag Banana Class</span><br>
+<div id="kiwi">
+    Div id 가 kiwi
+</div>
+<span class="apple banana"><!--에플도바나나도 빈칸은그뜻-->
+    span tag class 가 2개(apple,banana)
+</span>
+<br>
+<br>
+<img src="" id="img1">
+<img src="" class="myimg">
+<img src="" class="myimg">
+<img src="" class="myimg">
+</body>
+</html>

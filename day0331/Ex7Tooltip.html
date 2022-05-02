@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>  
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<style>
+    div.tooltip{
+        line-height: 1.5;
+        color: white;
+        width: 200px;
+        background-color: #f90;
+        border: 2px solid white;
+        padding: 1em;
+        font-size: 12px;
+        border-radius: 30px;
+        font-family: 'Jua';
+    }
+    b.view{cursor: pointer;}
+</style>
+<script>
+    $(function(){
+        //툴팁에 css 추가
+        $("div.tooltip").css({
+            "opacity":"0.9", /*투명도를 90프로로하느거야*/
+            "position":"absolute",
+            "display":"none"
+        });
+
+        $("a").bind({
+            //bind 묶는다
+            mouseover:function(){
+                $("div.tooltip").fadeIn();
+            },
+            mouseeout:function(){
+                $("div.tooltip").fadeOut();
+            },
+            mousemove:function(e){
+                $("div.tooltip").css({
+                    left:e.pageX+10+"px",
+                    top:e.pageY+10+"px"
+                });
+            }
+        });
+
+
+
+        $("b.view").bind({
+            //bind 묶는다
+            mouseover:function(){
+                $("div.tooltip").fadeIn();
+            },
+            mouseeout:function(){
+                $("div.tooltip").fadeOut();
+            },
+            mousemove:function(e){
+                $("div.tooltip").css({
+                    left:e.pageX+10+"px",
+                    top:e.pageY+10+"px",
+                    fontSize:"25px"
+                });
+                //b.view의 text를 얻어서 툴팁에넣기
+                $("div.tooltip").text($(this).text());
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <h3>Tooltip 링크부분에 마우스를 올려보세요</h3>
+    <a style="font-size:20px; cursor: pointer;">Tooltip</a>"
+    <pre>
+        <b class="view">손흥민(토트넘)</b>이 잉글랜드 프로축구 프리미어리그(EPL)에서 예상 이적료 8000만 유로(약 1077억원)로 공동 8위에 이름을 올렸다.
+여기서 손흥민의 시장 가치는 8000만 유로를 유지, EPL 선수들 중 공동 8위에 올랐다. 이적료는 손흥민의 영입을 원하는 구단이 현 소속팀 토트넘에 지불해야 하는 액수다.
+
+EPL 측면 공격수 중에선 모하메드 살라(리버풀), 라힘 스털링(맨체스터 시티)에 이은 3위다.
+
+살라는 1억 유로로 손흥민의 팀 동료 해리 케인(토트넘)과 함께 <b class="view">EPL 전체에서 1위를 차지했다.</b> 스털링은 8500만 유로다.
+
+손흥민의 예상 이적료는 2020년 12월의 9000만 유로(1211억원) 이후 작은 폭이지만 하락세를 그렸다.
+
+1992년생으로 올해 만 30세인 나이를 감안하면 여전히 긍정적인 평가를 받고 있는 모습이다.
+
+손흥민은 이번 시즌 리그에서 13골을 터뜨리며 득점부문 공동 2위를 달리고 있다.
+    </pre>
+    <div class="tooltip">
+        Java<br>
+        Html<br>
+        jQuery<br>
+        Oracle<br>
+        SpringBoot
+    </div>
+</body>
+</html>

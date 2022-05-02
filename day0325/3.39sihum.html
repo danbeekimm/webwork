@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.5.0.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  
+    <style>
+        body *{
+            font-size: 1.2rem;/*최상위태그가 기준, em:상위태그가 기준*/
+            font-family: 'Jua';
+            
+        }
+        div{
+            width: 120px;
+            height: 120px;
+            border: 1px solid gray;
+            cursor: pointer;
+            float: left;
+            margin-left: 10px;
+            background-repeat: no-repeat;
+            background-size: 120px 120px;
+        }
+        </style>
+        
+
+</head>
+<body>
+    <div></div>
+    <img src="" id="large">
+  
+    <script>
+        
+    var imgarr
+        imgarr[0]="../연예인사진/12.jpg";
+        imgarr[1]="../연예인사진/13.jpg";
+        imgarr[2]="../연예인사진/14.jpg";
+        imgarr[3]="../연예인사진/15.jpg";
+        imgarr[4]="../연예인사진/16.jpg";
+         
+        $("#large").attr("src",imgarr[0]);
+        
+        $("#large").click(function(){
+            var rdm = parseInt(Math.random()*5);
+            $("#large").attr("src",arr[rdm]);
+        });
+        
+
+
+        
+
+
+        
+            
+        
+
+   
+</script>
+</body>
+</html>

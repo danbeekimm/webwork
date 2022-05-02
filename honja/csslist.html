@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    ul.d{
+        list-style: none; /*아무런 불릿을 붙이지 않는다*/
+        text-align: center;
+        border-top: 1px solid red; border-bottom: 1px solid red; padding: 10px 0;
+    }
+    ul li{
+        display: inline;/*한줄배치 block은 세로 hidden은 사라짐*/
+        text-transform: uppercase;/*대문자*/
+        padding: 0 10px; letter-spacing: 10px;/*항목간의 간격과 글자간격*/
+    }
+    ul li a{
+       
+        text-decoration: none; color: black;
+        /*밑줄없이 일단*/
+    }
+    ul li a:hover{
+        text-decoration: underline; /*밑줄그려진다*/
+    }
+
+    div>ul.A{
+        list-style-type: circle;
+        border: 0;
+        padding: 0;
+        letter-spacing: normal;
+    }
+    div>ul.B{
+        list-style-type: disc; /*색채워진 동그라미*/
+        border: 0;
+        padding: 0;
+        letter-spacing: 0px;
+    }
+    div>ul.C{
+        list-style-type: square;
+        border: 0;
+        padding: 0;
+        letter-spacing: 0px;
+        
+    }
+</style>
+<body>
+   
+    <br>
+    <hr/>
+    <ul class="d">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div>
+        <ul class="A">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+        </ul>
+        <ul class="B">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+        </ul>
+        <ul class="C">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+        </ul>
+        </div>
+</body>
+</html>

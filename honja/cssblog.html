@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+    <title>My Blog Page</title>
+</head>
+<style>
+body{
+    background-color: #efe5d0;
+    font-family: 'Jua';
+    margin: 0px;
+}
+header{
+    background-color: #e7ba5a;
+    color: #000000;
+    margin: 0px;
+    text-align: center;
+    padding: 5px;
+}
+h1{
+    margin: 0px;
+}
+
+section#main{
+    display: table-cell; /*테이블셀처럼 배치*/
+    margin: 30px;
+}
+nav{
+    display: table-cell; /*테이블셀처럼 배치*/
+    background-color: #ff9900d3;
+    
+
+}
+footer{
+    background-color: #954b4b;
+    color: #efe5d0;
+    text-align: center;
+    padding: 10px;
+    margin: 0px 0px 0px 0px;
+    font-size: 90%;
+}
+</style>
+<body>
+    <header>
+        <h1>My Blog Page</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="http://www.w3c.org">W3C</a></li>
+            <li><a href="http://developer.mozilla.org">MOZILLA</a></li>
+            <li><a href="http://htmldog.com/guides">HTML Dogs</a></li>
+        </ul>
+        <figure>
+            <img width="85" height="85"
+            src="../img/ani07.gif"
+            alt="홍길동">
+        </figure>
+    </nav>
+    <section id="main">
+        <article>
+            <h1>Semantic</h1>
+            <p>시맨틱요소는 브라우저에게 요소의 의미나 목적을 명확하게 알려줌</p>
+        </article>
+        <article>
+            <h1>div와 span</h1>
+            <p>div는 divide의 약자로 페이지를 논리적인 섹션으로 분리하는데 사용하는 태그.
+                span은 인라인요소며 텍스트를위한 컨테이너로 사용할수있다.
+            </p>
+        </article>
+    </section>
+    <footer>Copyright (c) 2013 Hong</footer>
+
+</body>
+</html>

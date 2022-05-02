@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        body *{/*바디의 모든 하위태그*/
+            font-size: 1.4em;
+            font-family: 'jua';
+        }
+    </style>
+    
+</head>
+<body>
+    <h2>통장번호 입력하시오</h2>
+    <input type="text" id="txtinp1">
+    <hr>
+    <b>keyup 이벤트:</b>
+    <span id="msg1"><</span>
+    <br><br>
+    <b>keypress 이벤트:</b>
+    <span id="msg2"><</span>
+
+    <script> //txtinp1이 객채라 디스로 들어감.
+    //자기자신에 대한 이벤ㅌ트니 디스에 저장되어있음 자동으로 그래서 이렇게출력가능.
+    //펑션에 이벤트 받을수있음 함수호출때 자동으로 될수있음
+    //keyup은 키를 눌럿다가 놓을때발생해 마지막글자까지 읽어옴
+        document.getElementById("txtinp1").onkeyup=function(e){//키보드 눌럿다가 땔대
+          //  console.log(this.value);
+          console.log(e.target.value);//타겟이 임프테그 //둘다 됨.
+
+          document.getElementById("msg1").innerHTML=this.value;
+        }
+        //keypress 는 마지막 글자가 눌렸을때 발생하므로 마지막글자는 못읽어옴
+        document.getElementById("txtinp1").onkeypress=function(e){
+          
+          document.getElementById("msg2").innerHTML=e.target.value;
+        }
+    </script>
+    
+</body>
+</html>

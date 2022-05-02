@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        /* css 영역입니다*/
+        div.a{/*. 은 class 를 의미, div 태그의 a 클래스에만 적용*/
+            font-size: 2em;/*상위태그의 2배*/
+            font-family: 'Gamja Flower';
+            text-shadow: 5px 5px 3px gray;
+        }
+        b.a{/*b태그의 class a에만 적용*/
+            background-color: cadetblue;
+            font-family: 'Jua';          
+        }
+ 
+        .b{/*모든 태그의 class b 에 적용*/
+            border: 5px solid red;
+            font-family: 'Nanum Pen Script';
+        }
+ 
+        div.c{
+            font-family: 'Lobster';
+            font-size: 3em;
+            width: 400px;
+            height: 100px;
+            border: 2px solid orange;
+            /*한줄일경우 정가운데 보내려면*/
+            line-height: 100px;/*세로가운데*/
+            text-align: center;/*가로가운데*/
+            margin-bottom: 30px;/*요소아래의 바깥여백*/
+            box-shadow: 5px 5px 5px pink;
+            text-shadow: 5px 5px 5px yellowgreen;
+        }
+
+        img.img1{
+            position: absolute;/*00을 기준으로 절대좌표*/
+            left: 600px;/*좌측위치 지정*/
+            top:210px; /*윗쪽위치 지정*/
+        }
+        img.img2{
+            position: absolute;
+            left:1000px;
+            top: 400px;
+            width: 200px;
+            border: 5px groove gold;
+            box-shadow: 8px 8px 5px gray;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <font size ="50" color="blue">가나다라</font>
+    <font size="5"  color="cyan">Font Tag Test</font><br>
+    <b style="font-size:50px;color: #ff00ff15;">Have a Nice Day!!!</b><br>
+    <b class="a" style="font-size: 50px;">Happy day!!!</b><br><br>
+    <b class="b" style="font-size: 50px;">재미있는 자바스크립트!!</b><br>
+    <div class="a">안녕하세요</div>
+    <div class="b">반가워요!!!</div>
+    <div  class="c">Nice me Too!!</div>
+    <img src="../snoopyAvata/s1.JPG" class ="img1" title ="개똥이" alt = "개똥이없음">
+    <img src="../div_img/beauty2.jpg"class ="img2" title="내방입니다" alt = "내방아님">
+   <div>안녕하쇼</div>
+</body>
+</html>

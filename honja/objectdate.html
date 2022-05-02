@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        // 1. new Date();
+        // new Date(milliseconds);
+        // new Date(Datestring);
+        // new Date(year, month, date[, hours[, minutes[,seconds[,ms]]]])
+
+        //2.  var d1=new Date(2022,4,3,0,0,0);
+        // var d2=new Date("January 20,2022 16:41:01");//얼마나 흘렀는지
+        // alert(d1);
+        // alert(d2);
+
+        //3. var today=new Date();
+        // document.write(today.toDateString()+"<br>"); //요일 월일 년
+        // document.write(today.toISOString()+"<br>"); //년월일시간
+        // document.write(today.toJSON()+"<br>"); //년월일시간 //간단하게
+        // document.write(today.toLocaleDateString()+"<br>");//년월일
+        // document.write(today.toLocaleTimeString()+"<br>");//오후시간
+        // document.write(today.toLocaleString()+"<br>");//년월일오후시간 //제일잘나옴
+        // document.write(today.toString()+"<br>"); //영어로 요일 일월 한국표준시로나옴
+        // document.write(today.toTimeString()+"<br>");  //한국표준시로 시간만나옴
+        // document.write(today.toUTCString()+"<br>"); //영어로 잘나옴,
+
+
+        // 4. function checkDate(){
+        //     var s=document.getElementById("pdate").value;
+        //     var pdate=new Date(s);
+        //     var today=new Date();
+        //     var diff= today.getTime()-pdate.getTime(); //겟타임은 밀리초단위로계산
+        //     var days=Math.floor(diff/(1000*60*60*24));
+
+        //     if(days>30){
+        //         alert("교환기간이 지났습니다.");
+        //     }
+        // }
+
+        
+    </script> -->
+</head>
+<body>
+    <!-- 4 구입날짜:
+    <input type="date" id="pdate">
+    <button onclick="checkDate()">검사</button> -->
+
+    <!-- 5 시계만들기
+    <div id="remaining"></div>
+    <script>
+        function datesUntilNewYear(){
+            var now= new Date();
+            var newYear = new Date('January 1,'+(now.getFullYear()+1))
+            var diff= newYear - now;
+            var milliseconds=Math.floor(diff%1000);
+            diff=diff/1000;
+            var seconds=Math.floor(diff%60);
+            diff=diff/60;
+            var minutes=Math.floor(diff%60);
+            diff=diff/60;
+            var hours=Math.floor(diff%24);
+            diff=diff/24;
+
+            var days=Math.floor(diff);
+            var outStr='내년도신정까지'+days+"일,"+hours+"시간,"+minutes+"분,"+seconds+"초,"+"남았습니다.";
+
+            document.getElementById('remaining').innerHTML=outStr;
+            setTimeout("datesUntilNewYear()",1000);
+        }
+
+        datesUntilNewYear(); -->
+
+
+
+    <div id="clock"></div>
+    <script>
+        function setClock(){
+            var now= new Date();
+            var s= now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
+            document.getElementById("clock").innerHTML=s;
+            setTimeout("setClock()",1000); //1초지나면 셋클럭호출한다.
+       
+        }
+        setClock();
+    </script>
+    
+</body>
+</html>

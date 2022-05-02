@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        
+        #one{
+            width: 200px;
+            background-color: cyan;
+            position: static ;/*정상흐름에 따라배치 선언안한것과같음*/
+            
+        }
+        #two{
+            background-color: yellow;
+            position: relative ; /*정상적인위치*/
+            left: 30px;
+            width: 200px;
+            height: 50px;
+            
+        }
+        #three{
+            
+            position: absolute ; 
+            top: 30px;
+            left: 130px;
+            background-color: rgb(0, 255, 21);
+            width: 200px;
+            height: 50px;
+            
+        }
+        img.a{
+            float: right;
+        }
+        img.b{
+            float: left;
+        }
+        #aa{
+            clear: both; /*float속성 제거 후 그밑에 다시시작*/
+        }
+        #box1{
+            position: absolute ;
+            top: 400px; left: 0;
+            width: 100px; height: 100px;
+            background: blue;
+            z-index: 200; /*크면맨앞임*/
+        }
+
+        #box2{
+            position: absolute ;
+            top: 430px; left: 30px; 
+            width: 100px; height: 100px;
+            background: yellow;
+            z-index: 100;
+        }
+
+        #box3{
+            position: absolute ; /*z-index쓰려면 position이 ab나 fix로 되어있어야함*/
+            top: 460px; left: 60px;
+            width: 100px; height: 100px;
+            background: brown;
+            /* z-index: inherit; 맨뒤 */
+            z-index:1000; 
+        }
+
+        #pp{
+            min-width: 100px;
+            min-height: 100px;
+        }
+        #ppp{
+            max-width: max-content;
+            min-height: max-content;
+        }
+        #pppp{
+            border: 1px solid black;
+            width: 300px;
+            height: 100px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="one">block#1</p>
+    <p id="two">block#2</p>
+    <p id="three">block#2</p>
+    <img class="a" src="../연예인사진/14.jpg" width="160" height="120">
+    <img class="b" src="../연예인사진/16.jpg" width="160" height="120">
+    
+    <p id="aa">삶이 그대를 속일지라도 슬퍼하거나 노여워말라</p>
+    <hr/>
+    <br>
+    <hr/>
+    <br>
+    <hr/>
+    <br>
+    <hr/>
+    <br><hr/>
+    <br><hr/>
+    <br>
+    <hr/>
+    <br>
+
+    
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+    <div id="box3">box3</div>
+<br>
+<hr/>
+<p id="pp">요소크기 :최소 100까지임.min-width와 height</p>
+<p id="ppp">요소크기 :최대 max-width와 height</p>
+<p id="pppp">overflow:자식이 부모범위 벗어났을때
+    hidden 은 안보이게함
+    scroll
+    auto 자동으로 스크롤바가 내려감
+    더더
+    더쓰자
+    더써봐
+    
+    가나다라ㅏ라라
+    마바사ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+    아자차카ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+    타파하dkdkdkkdkdkdkdkkkkkkk
+</p>
+</body>
+</html>

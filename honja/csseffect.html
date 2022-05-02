@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #id1{opacity: 0.4;}
+        #id1:hover{opacity: 1.0;} /*마우스올리면 불투명*/
+        #id2{opacity: 0.4;}
+        #id2:hover{opacity: 1.0;} /*마우스올리면 불투명*/
+
+        #id3{
+            visibility: hidden;
+            border: 1px dotted red;
+        } /*자리차지 하지만 안보임*/
+
+        #id4{
+            visibility: visible;
+            border: 1px dotted red;
+        } /*기본값*/
+
+        #transition{
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            background: yellow;
+            transition: width 5s; /*width변경시5초에 걸려서 변하기*/
+        }
+        #transition:hover{
+            width: 200px; /*200까지 5초만에 바뀌기*/
+        }
+        #id5{
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            background-color: yellow;
+            transition: width 5s height 5s border 5s transform 5s;
+            -webkit-transition: width 5s height 5s border 5s -webkit-transform 5s;
+        }
+        #id5:hover{
+            width: 200px;
+            height: 100px;
+            border:  10px solid red;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg); /*회전*/
+        }
+    </style>
+</head>
+<body>
+    <h1 >Opacity속성</h1>
+    <img id="id1" src="../음식이미지/라면.jpg" width="150" height="120" alt="raman">
+    <img id="id2" src="../음식이미지/일본라면.jpg" width="150" height="120" alt="elbonraman">
+ <hr/>
+ <br>
+ <h1>visibility속성</h1>
+ <img id="id3"src="../음식이미지/닭꼬치.jpg" width="150" height="120" alt="raman">
+ <img id="id4"src="../음식이미지/닭꼬치.jpg" width="150" height="120" alt="raman">
+<br>
+<br>
+<div id="transition">마우스를 올려보세요</div>
+<p id="id5">마우스를 올려보세요</p>
+</body>
+</html>

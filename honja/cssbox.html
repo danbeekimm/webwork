@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        p{
+            border: 3px;
+            margin: 0px; /*위오른아래왼 4개 한꺼번설정가능*/
+            padding: 0px;
+        }
+        p.thick{
+            border-style: solid;
+            border-width: thick; /*border-width은 스타일설정이되어있어야함*/
+            box-shadow: 3px 3px 5px green; /*가로,세로,번지는정도,그림자색*/
+        }
+        p.medium{
+            border-style: solid;
+            border-width: medium;
+            border-color: aquamarine;
+            border-radius: 100px;
+        }
+        p.thin{
+            border:  dotted red;/*두께,스타일,색상*/
+            border-width: thin;
+            border-radius: 25px;
+            padding: 10px 50px; /*위아래,왼쪽너비*/
+        }
+        #rr{
+            border: 30px solid transparent;
+            width: 300px;
+            height: 50px;
+            border-image: url(../div_img/oneday01.jpg)50 50 round;
+        }
+        #target1{
+            width: 100px;
+            height: 50px;
+            background-color: yellow;
+            background-image: none;
+        }
+        #target2{
+            width: 300px;
+            height: auto;
+            resize: both; /*크기 조정 가능*/
+            overflow: auto ;/*크기 조정 가능*/
+            border: 1px solid red;
+            background-color: lightcoral;
+            background-image: none;
+        }
+        #target3{
+            margin: 10px;
+            padding: 20px;
+            background-color: lightblue; border: 1px solid red;
+        }
+        #target4{
+            margin: 10px;
+            padding: 0px;
+            background-color: lightsalmon; border: 1px solid red;
+        }
+        #rrr{
+            background-color: yellow;
+            width: 200px;
+            padding: 10px;
+            border: 1px solid red;
+            margin-left: auto;
+            margin-right: auto; /*중앙배치 왼오auto but width조정하기*/
+        }
+        #center,em{
+            border: dotted 3px red;
+        }
+    </style>
+</head>
+<body>
+    <!--경계선 공부-->
+    <h1>경계선공부</h1>
+    <p style="border-style: none;">none:없음</p>
+    <p style="border-style: dotted;">dotted:도트</p>
+    <p style="border-style: dashed;">dashed:띈짝대기</p>
+    <p style="border-style: solid;">solid:기본</p>
+    <p style="border-style: double;">duoble:2줄</p>
+    <p style="border-style: groove;">groove:3d밑</p>
+    <p style="border-style: ridge;">ridge:3d위</p>
+    <p style="border-style: inset;">inset:3d위검정액자</p>
+    <p style="border-style: outset;">outset:3d아래검정액자</p>
+    <p style="border-right-style: dotted;
+    border-left-style: dashed;
+    border-top-style: groove;
+    border-bottom-style: double;">여러개해보기</p>
+    <p style="border-style: dotted solid double dashed;">한줄로 여러개</p>
+    <hr/>
+    <hr/>
+    <hr/>
+    <p class="thick">경계선thick</p>
+    <p class="medium">경계선medium</p>
+    <p class="thin">경계선1px</p>
+    <hr/>
+    <hr/>
+    <hr/>
+    <div id="rr">경계이미지 반복되며 그려진다.</div>
+    <hr/>
+    <hr/>
+    <hr/>
+    <p id="target1">이것은p요소입니다</p>
+    <div id="target2">이것은div요소입니다</div>
+    <hr/>
+    <br>
+    <p id="target3">margin:0px,padding:0px인 단락입니다</p>
+    <p id="target4">margin:10px,padding:20px인 단락입니다</p>
+    <br>
+    <br>
+    <div id="rrr">div요소202픽셀</div>
+    <br>
+    <br>
+    <p  id="center" style="text-align: center;"><em>야호</em></p>
+</body>
+</html>

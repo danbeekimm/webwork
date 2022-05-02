@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        #msg{
+            width: 700px;
+            font-size: 2em;
+            text-align: center;
+            font-family: 'jua';
+            border: 2px solid rgb(243, 201, 123);
+            height: 60px;
+            line-height: 60px;
+            margin-bottom: 30px;
+        }
+    
+        button{
+            width: 150px;
+            height: 40px;
+            font-family: 'jua';
+            font-size: 1.2em;
+            background-color: rgb(157, 218, 197);
+            color: tomato;
+    
+        }
+        button:hover{
+            box-shadow: 5px 5px 5px gray;
+        }
+        input{
+            font-size: 1.5em;
+            font-family: 'jua';
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var name=document.getElementById("txtname");
+            var java=document.getElementById("txtjava");
+            var html=document.getElementById("txthtml");
+            var m=document.getElementById("msg");
+            
+            
+            document.getElementById("btn1").onclick=function(){
+                var total=java+html;
+                   var num = total/2;
+                    
+                    
+                m.innerHTML=name.value+"님의 점수합은"+total.value+" 입니다";
+                   
+
+                if(java.value <0 || html.value<0){ //나이
+                    alert("점수를 다시 입력해주세요"); //경고창
+                    year.focus();
+                    return;// 현재 함수 종료
+                }
+                var total=java+html;
+                   var num = total/2;
+                  
+                   
+                    
+                m.innerHTML=name.value+"님의 점수합은"+total.value+" 입니다";
+
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="msg">평균구하기</div>
+    <b>이름입력:</b>
+    <input type="text" id="txtname" style="width: 120px;">
+    &nbsp;&nbsp;&nbsp;   
+    <b>java점수:</b>
+    <input type="text" id="txtjava" style="width: 120px;">
+    &nbsp;&nbsp;&nbsp;   
+    <b>html점수:</b>
+    <input type="text" id="txthtml" style="width: 120px;">
+    &nbsp;&nbsp;&nbsp;   
+    <b>총점수:</b>
+    <input type="text" id="txttotal" style="width: 120px;">
+    &nbsp;&nbsp;&nbsp;   
+    <b>평균:</b>
+    <input type="text" id="txtnum" style="width: 120px;">
+    &nbsp;&nbsp;&nbsp;
+    <button type="button" id="btn1">결과출력</button>
+</body>
+</html>

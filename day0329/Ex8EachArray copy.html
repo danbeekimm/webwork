@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>  
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        .fg{
+            float: left;
+
+        }
+        .fg img{
+            border: 2px solid orange;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .fg figcaption{
+            font-weight: bold;
+            font-family: 'Gamja Flower';
+            font-size: 25px;
+
+        }
+        #large{
+            width: 300px;
+            height: 500px;
+            position: absolute;
+            left: 400px;
+            top: 300px;
+            
+        }
+        </style>
+        <script>
+            $(function(){
+                // 배열에서 첫번째 이미지명을 얻어서 #large에 넣기
+                $("#large").attr("src",imginfo[0].name); //0번에 있는 파일명넣으면돼
+
+                
+            })
+        </script>
+</head>
+<body>
+    <div id="show"></div>
+    <img src="" id="large">
+
+    <script>
+       var imgin=[
+            {name:"../연예인사진/12.jpg",caption:"박보영",width:"100px"},
+            {name:"../연예인사진/13.jpg",caption:"박신혜",width:"100px"},
+            {name:"../연예인사진/14.jpg",caption:"소지섭",width:"100px"},
+            {name:"../연예인사진/15.jpg",caption:"설현",width:"100px"},
+            {name:"../연예인사진/16.jpg",caption:"고수",width:"100"}
+        ];
+
+        
+    </script>
+</body>
+</html>
+

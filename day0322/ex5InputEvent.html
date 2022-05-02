@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        #msg{
+            width: 700px;
+            font-size: 2em;
+            text-align: center;
+            font-family: 'jua';
+            border: 2px solid rgb(243, 201, 123);
+            height: 60px;
+            line-height: 60px;
+            margin-bottom: 30px;
+        }
+    
+        button{
+            width: 150px;
+            height: 40px;
+            font-family: 'jua';
+            font-size: 1.2em;
+            background-color: rgb(157, 218, 197);
+            color: tomato;
+    
+        }
+        button:hover{
+            box-shadow: 5px 5px 5px gray;
+        }
+        input{
+            font-size: 1.5em;
+            font-family: 'jua';
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var name=document.getElementById("txtname");
+            var year=document.getElementById("txtyear");
+            var m=document.getElementById("msg");
+            //버튼이벤트
+            document.getElementById("btn1").onclick=function(){
+                //이름 입력안했을때 경고후 포커스주기 :이거
+                if(name.value==''){ //공백입력하면안돼 그냥 ''
+                    alert("이름을 먼저 입력해주세요"); //경고창
+                    name.focus();
+                    return;// 현재 함수 종료
+                }
+
+                if(year.value==''){ //나이
+                    alert("태어난 년도를 입력해주세요"); //경고창
+                    year.focus();
+                    return;// 현재 함수 종료
+                }
+
+                //태어난 년도에 문자가 들어있을 경우 경고 메세지 후 종료
+                if (isNaN(year.value)){//문자인경우true, 숫자는 false
+                    alert("태어난 년도는 숫자로만 입력해주세요");
+                    year.value=""; //입력값지우기
+                    year.focus();
+                    return;
+                }
+                //12개의 띠 배열에 저장
+                var ddi=["원숭이","닭","개","돼지","쥐","소","범","토끼","용","뱀","말","양"];
+                m.innerHTML=name.value+"님은"+year.value+" 년 생입니다";
+                m.innerHTML+="(<span style='color:red;'>"+ddi[year.value%12]+"띠</span>)";
+                //스타일주기위해 스판적용
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="msg">여기에 이벤트 결과 출력</div>
+    <b>이름입력:</b>
+    <input type="text" id="txtname" style="width: 120px;">
+    &nbsp;&nbsp;&nbsp;   
+    <b>태어난 년도 입력:</b>
+    <input type="text" id="txtyear" style="width: 120px;">
+    &nbsp;&nbsp;&nbsp;
+    <button type="button" id="btn1">결과출력</button>
+</body>
+</html>

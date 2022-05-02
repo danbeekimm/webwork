@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.5.0.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        body *{
+            font-size: 1.2rem;/*최상위태그가 기준, em:상위태그가 기준*/
+            font-family: 'Jua';
+        }
+        /*class추가*/
+        .apple{
+            border: 10px groove gold;
+            box-shadow:8px 8px 8px gray;
+        }
+        .orange{
+            border-radius: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <img src="../div_img/bottle01.jpg" width="300">
+    <br>
+    <button type="button">apple 클래스만 추가</button>
+    <button type="button">orange 클래스만 추가</button>
+    <button type="button">apple orange 클래스 추가</button>
+    <button type="button">모두 제거</button>
+    <script>
+        $("button:eq(0)").click(function(){
+            //오렌지 제거
+            $("img").removeClass("orange");
+            //에플추가
+            $("img").addClass("apple");
+        });
+
+        $("button:eq(1)").click(function(){
+            //에플 제거
+            $("img").removeClass("apple");
+            //오렌지 추가
+            $("img").addClass("orange");
+        });
+
+        $("button:eq(2)").click(function(){
+            //모든 클레스제거
+            $("img").removeClass();
+            //apple orange 추가
+            $("img").addClass("apple orange");
+        });
+
+        $("button:eq(3)").click(function(){
+            //apple orange 제거
+            $("img").removeClass("apple orange");
+        });
+
+        //이미지에 마우스 올리면 ../div_img/beauty4.jpg
+        //벗어나면 ../div_img/bottle01.jpg 로변경
+        $("img").mouseover(function(){
+            $(this).attr("src","../div_img/beauty4.jpg");
+        //orange 적용
+            $(this).addClass("orange");
+    });
+        
+        $("img").mouseout(function(){
+            $(this).attr("src","../div_img/bottle01.jpg");
+            //orange제거
+            $(this).removeClass("orange");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+    <style>
+        div.a>ul{
+           list-style: none;
+           /* 앞에 디스크모양 없애는법 */
+        }
+        div.a>ul>li{
+            float: left;/*옆으로정렬, 한번주면계속이렇게나옴*/
+            font-size: 2em;
+            font-family: 'jua';
+            width: 150px;
+            height: 80px;;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 80px;
+             /* 같게하면 글씨 높이같아짐 */
+            margin-right: 5px;
+            cursor: pointer;
+            background-color: #16f19eef;
+            color: aliceblue;
+        }
+
+
+
+        div.a>ul>li:active{  /*hover이랑 번갈아가며 해보기active는 누르면, 호바는 마우스대면*/
+            background-color: rgb(218, 53, 53);
+            color: black;
+        }
+
+        div.gun{
+            width: 300px;
+            height: 250px;
+            background-image: url('../jquery_image/gun.png');
+        }
+        div.gun:active{
+            background-position: right bottom;
+            /*누르면 총쏘는사진이 올라감*/
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="a" style="width: 100%;">
+    <ul>
+        <li>Home</li>
+        <li>오시는길</li>
+        <li>상품목록</li>
+        <li>장바구니</li>
+        <li>내정보</li>
+    </ul>
+    </div>
+    <hr style="clear: both;"> 
+        <!-- float:left속성해제 -->
+    <h1>총을 클릭해보세요</h1>
+    <div class="gun"></div>
+</body>
+</html>

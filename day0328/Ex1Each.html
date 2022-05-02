@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.5.0.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  
+    <style>
+        body *{
+            font-size: 1.2rem;/*최상위태그가 기준, em:상위태그가 기준*/
+            font-family: 'Jua';
+        }
+        .bg_0_line{background-color: orange; width: 500px; border: 3px solid green;}
+        .bg_1_line{background-color: yellow; width: 500px; border: 3px dotted rgb(128, 15, 235);}
+        .bg_2_line{background-color: rgb(0, 255, 55); width: 500px; border: 3px inset rgb(216, 190, 105);}
+        .bg_3_line{background-color: rgb(255, 72, 0); width: 500px; border: 3px dashed rgb(57, 136, 238);}
+</style>
+
+</head>
+<body>
+    <h2>each 반복문연습<h2>
+        <ul>
+            <li>have a nice day!!</li>
+            <li>have a nice day!!</li>
+            <li>have a nice day!!</li>
+            <li>have a nice day!!</li>
+        </ul>   
+
+        <script>
+            //selector 의 갯수만큼 자동반복
+            $("ul li").each(function(index,item){
+                //index는 li의 인덱스, item은 해당요소(li)-모두 필요없으면생략가능.
+                console.log($(this).text().index,item);
+                $(this).addClass("bg_"+index+"_line");
+            });
+        </script>
+
+    
+</body>
+</html>
